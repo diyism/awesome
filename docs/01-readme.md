@@ -1,3 +1,14 @@
+    #after install awesome windows manager:
+    $ sudo mv /usr/bin/awesome /usr/bin/awesome.bin
+    
+    $ cat /usr/bin/awesome
+    #!/bin/bash
+    killall Xephyr 2>/dev/null
+    Xephyr :1 -ac -screen 1920x1080 &
+    sleep 2
+    DISPLAY=:1 /usr/bin/awesome.bin
+
+
 # Readme
 
 ## About Awesome
