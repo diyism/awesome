@@ -17,6 +17,8 @@
     # awful.layout.layouts = { treetile, --awful.layout.suit.floating, --awful.layout.suit.max, --awful.layout.suit.max.fullscreen,
     # 注释掉s.mytasklist, 因为平铺管理器 根本不需要 系统任务栏
     # s.mywibox:setup { ...,  --s.mytasklist, -- Middle widget
+    # 所有0,1,...,9 这些workspace切换按钮加宽:
+    s.mytaglist = awful.widget.taglist {..., widget_template = { { { ..., forced_width = 120,
 
 # Readme
 
