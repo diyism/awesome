@@ -16,7 +16,16 @@
 
     # 注释掉floating 和 max模式, 把tile.left模式放最前:
     # awful.layout.layouts = {   awful.layout.suit.tile.left, --awful.layout.suit.floating, --awful.layout.suit.max, --awful.layout.suit.max.fullscreen,
-    # 
+    # 在 awful.tag({ "1", "2", "3", ... 之后加:
+    for _, t in ipairs(s.tags) do
+        t.master_count=  1  -- awful.layout.suit.tile.left里 1个主窗口在右, 放firefox浏览器
+        t.column_count = 2  -- awful.layout.suit.tile.left里 2个副窗口列在左
+    end
+    # firefox有可能丢失多标签页记录, 这样恢复:
+    killall firefox-bin
+    cp ~/.mozilla/firefox/e0bwwjak.default/sessionstore-backups/recovery.jsonlz4 ~/.mozilla/firefox/e0bwwjak.default/sessionstore-backups/recovery.jsonlz4.bak
+    cp ~/.mozilla/firefox/e0bwwjak.default/sessionstore-backups/previous.jsonlz4 ~/.mozilla/firefox/e0bwwjak.default/sessionstore-backups/recovery.jsonlz4
+    nohup firefox >/dev/null 2>&1 &
 
     # 注释掉s.mytasklist, 因为平铺管理器 根本不需要 系统任务栏
     # s.mywibox:setup { ...,  --s.mytasklist, -- Middle widget
