@@ -21,7 +21,7 @@
         t.master_count=  1  -- awful.layout.suit.tile.left里 1个主窗口在右, 放firefox浏览器
         t.column_count = 2  -- awful.layout.suit.tile.left里 2个副窗口列在左
     end
-    # firefox有可能丢失多标签页记录, 这样恢复:
+    # 分到awesome的多个workspace的firefox window之间互相写冲突, 可能搞坏多标签页记录, 这样恢复:
     killall firefox-bin
     cp ~/.mozilla/firefox/e0bwwjak.default/sessionstore-backups/recovery.jsonlz4 ~/.mozilla/firefox/e0bwwjak.default/sessionstore-backups/recovery.jsonlz4.bak
     cp ~/.mozilla/firefox/e0bwwjak.default/sessionstore-backups/previous.jsonlz4 ~/.mozilla/firefox/e0bwwjak.default/sessionstore-backups/recovery.jsonlz4
