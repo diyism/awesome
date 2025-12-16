@@ -8,6 +8,9 @@
     sleep 2
     DISPLAY=:1 /usr/bin/awesome.bin
 
+    $ micro ~/.config/awesome/rc.lua
+    # awful.rules.rules { { properties = { border_width = beautiful.border_width, ..., floating = false     -- 强制所有窗口默认不浮动
+    # s.mywibox:setup { layout = wibox.layout.align.horizontal, ...,  --s.mytasklist, -- Middle widget      -- 注释掉s.mytasklist, 因为平铺管理器 根本不需要 系统任务栏
 
 # Readme
 
