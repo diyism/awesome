@@ -32,6 +32,17 @@
     # 所有0,1,...,9 这些workspace切换按钮加宽:
     s.mytaglist = awful.widget.taglist {..., widget_template = { { { ..., forced_width = 120,
 
+    #需要加语音输入法 细长状态栏的话 还要留出位置:
+    -- Create an invisible wibar below mywibox to reserve space for voxkb (18px)
+    s.voxkb_spacer = awful.wibar({
+        position = "top",
+        screen = s,
+        height = 18,
+        y = 20,  -- Position below mywibox
+    })
+    #还要将输入法状态栏设置为floating, 添加输入法标题栏窗口名voxkb:
+    -- Floating clients. { rule_any = { ... name = {"Event Tester",  -- xev.   "voxkb"}, ... }, properties = { floating = true }},
+
 # Readme
 
 ## About Awesome
