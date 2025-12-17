@@ -43,7 +43,9 @@
     #还要将输入法状态栏设置为floating, 添加输入法标题栏窗口名voxkb:
     -- Floating clients. { rule_any = { ... name = {"Event Tester",  -- xev.   "voxkb"}, ... }, properties = { floating = true }},
 
-    ![](./2025-12-18-040039_1920x1080_scrot.png)
+![](./2025-12-18-040039_1920x1080_scrot.png)
+
+=================================================================
 
 # Readme
 
