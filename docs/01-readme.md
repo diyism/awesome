@@ -1,4 +1,4 @@
-    #after install awesome windows manager:
+    #after install awesome windows manager in your VPS:
     $ sudo mv /usr/bin/awesome /usr/bin/awesome.bin
     
     $ sudo micro /usr/bin/awesome
