@@ -9,6 +9,7 @@
     DISPLAY=:1 /usr/bin/awesome.bin
 
     $ micro ~/.config/awesome/rc.lua
+    # 参考本git repo根目录的rc.lua文件
     # 所有窗口默认初始状态为不浮动:
     # awful.rules.rules { { properties = { ..., floating = false
     # 不需要float, sticky, ontop 这三个按钮:
