@@ -51,6 +51,11 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.font = "sans 21"
+beautiful.menu_height = 30
+beautiful.menu_width = 200
+beautiful.wibar_height = 22
+beautiful.titlebar_size = 20
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
@@ -585,7 +590,7 @@ client.connect_signal("request::titlebars", function(c)
         end)
     )
 
-    awful.titlebar(c) : setup {
+    awful.titlebar(c, {size = beautiful.titlebar_size}) : setup {
         { -- Left
             awful.titlebar.widget.iconwidget(c),
             buttons = buttons,
