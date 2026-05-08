@@ -51,11 +51,13 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
-beautiful.font = "sans 21"
-beautiful.menu_height = 30
-beautiful.menu_width = 200
-beautiful.wibar_height = 22
-beautiful.titlebar_size = 20
+-- 强制设置系统 DPI，解决 Beyond Compare 等老软件字体过小问题
+awful.spawn.with_shell("echo 'Xft.dpi: 96' | xrdb -merge")
+--beautiful.font = "sans 21"
+--beautiful.menu_height = 30
+--beautiful.menu_width = 200
+--beautiful.wibar_height = 22
+--beautiful.titlebar_size = 20
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
