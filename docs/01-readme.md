@@ -33,6 +33,9 @@
     # 所有0,1,...,9 这些workspace切换按钮加宽:
     s.mytaglist = awful.widget.taglist {..., widget_template = { { { ..., forced_width = 120,
 
+    # 日期时间组件里加入秒数:
+    mytextclock = wibox.widget.textclock(" %a %b %d, %H:%M:%S ", 1)
+
     #需要加语音输入法 细长状态栏的话 还要留出位置:
     -- Create an invisible wibar below mywibox to reserve space for voxkb (18px)
     s.voxkb_spacer = awful.wibar({
